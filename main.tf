@@ -12,7 +12,7 @@ resource "aws_launch_template" "ofir_template" {
     device_index                = 0
     subnet_id                   = var.subnet_ids[1] # Picked one subnet for interface
     security_groups             = var.security_group_ids
-    associate_public_ip_address = true
+    associate_public_ip_address = false
   }
 
   user_data = var.user_data
